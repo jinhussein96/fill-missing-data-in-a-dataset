@@ -1,17 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 24 14:29:21 2021
 
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 24 14:29:21 2021
-
-@author: JIN_HUSSEIN
-"""
-'''
-# Location based replacement
-df.loc[2,'ST_NUM'] = 125
-'''
 import pandas as pd 
 data = pd.read_csv("country_vaccination_stats.csv")
 data = data[["country", "date", "daily_vaccinations", "vaccines"]]
