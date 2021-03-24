@@ -2,6 +2,10 @@
 """
 Created on Wed Mar 24 14:29:21 2021
 
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 24 14:29:21 2021
+
 @author: JIN_HUSSEIN
 """
 '''
@@ -24,14 +28,19 @@ for i in countries:
             minvalue =  data[baslangic-1:index]['daily_vaccinations'].min()
             data[baslangic-1:index]['daily_vaccinations'].fillna(minvalue, inplace = True)
         else:
-            data[baslangic-1:index]['daily_vaccinations'].fillna(0)
+            data[baslangic-1:index]['daily_vaccinations'].fillna(0, inplace = True)
         baslangic = index+1
         index = index +1
         
         
 if(not ( data[baslangic-1:index]['daily_vaccinations'].isnull().all())):
+    
     minvalue =  data[baslangic-1:index]['daily_vaccinations'].min()
     data[baslangic-1:index]['daily_vaccinations'].fillna(minvalue, inplace = True)
 else:
-    data[baslangic-1:index]['daily_vaccinations'].fillna(0)
+    
+    data[baslangic-1:index]['daily_vaccinations'].fillna(0, inplace = True)
+
 data.to_csv('country_vaccination_stats1.csv')
+
+
