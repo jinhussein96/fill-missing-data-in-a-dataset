@@ -35,6 +35,3 @@ if(not ( data[baslangic-1:index]['daily_vaccinations'].isnull().all())):
 else:
     data[baslangic-1:index]['daily_vaccinations'].fillna(0)
 data.to_csv('country_vaccination_stats1.csv')
-'''
-dfObj = pd.DataFrame(students, columns = ['Name' , 'Age', 'Citstajy'], index=['a', 'b', 'c'])
-'''
